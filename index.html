@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Match the Fruit!</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+ </head>
+<body>
+    
+    <main class="title-screen">
+
+    <!--Start Menu-->
+           <section class="start-screen" id="startScreen">
+
+        <h1 class="game-title"> MATCH THE FRUIT!</h1>
+
+<!--<div class="fruit-decor" aria-hidden="true">
+<img src="images/strawberry.png" alt="">
+<img src="images/orange.png" alt="">
+<img src="images/cherries.png" alt="">
+</div>-->
+
+
+<!--INSTRUCTIONs-->
+<div class="instructions">
+
+   <h2>HOW TO PLAY</h2>
+
+    <ul class="custom-dot-list">
+    <li><p>Select two cards</p></li>
+    <li><p>Find the two matching fruits</p></li>
+    <li><p>Match all six to win</p></li>
+</ul>
+
+</div>
+
+<button class="start-button" id="button" type="button">
+START
+</button>
+
+</section>
+
+ <!--GAME SCREEN-->
+ <section class="game-screen" id="gamescreen" hidden>
+
+ <header class="game-header">
+
+<div>
+   
+   <h1>Fruit Match</h1>
+
+</div>
+
+<button class="secondary-button" id="menubutton" type="button">
+    MENU
+</button>
+
+ </header>
+
+ <p class="game-instructions">
+    Find all six matching fruits!
+ </p>
+
+ <div class="scoreboard">
+    <p>MOVES: <span id="moves">0</span></p>
+    <p>MATCHED: <span id="matched">0</span> /6 </p>
+ </div>
+
+ <div class="card-grid" id="cardGrid" 
+ aria-label="fruit memory cards"></div>
+
+</section>
+
+
+<!--WINNING SCREEN-->
+
+<section class="win-screen" id="winScreen" hidden>
+
+    <p class="eyebrow">GRAPE JOB!</p>
+
+    <h1>YOU WON!</h1>
+
+    <p>You matched every fruits!</p>
+
+    <p class="final-score">
+     Total moves: <span id="finalmoves">0</span></p>
+
+   <button class="start-button" id="PlayAgainButton" type="button">
+    PLAY AGAIN
+</button>
+
+<button class="text-button" id="HomeButton" type="button">
+    BACK TO MENU
+</button>
+   
+     </section>
+   </main>
+</body>
+</html>
