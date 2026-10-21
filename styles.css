@@ -1,0 +1,235 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    color:rgb(0, 0, 0);
+    background-image: url("images/gradient wallpaper2.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+button{
+    font: inherit;
+    cursor: pointer;
+}
+
+button:focus-visible{
+    outline: 3px solid black;
+    outline-offset: 4px;
+}
+
+/*MAIN MENU*/
+
+.title-screen {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+.start-screen{
+    width: 100%;
+    max-width:600px;
+    padding: 35px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    text-align: center;
+}
+
+
+/*START/GAME SCREEN*/
+
+.game-title{
+    width: 100%;
+    max-width: 700px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.10);
+    text-align: center;
+}
+
+.game-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    text-align: left;
+     
+}
+
+.game-header h1{
+    font-size: 30px;
+}
+
+.game-instructions {
+    margin: 25px 0;
+    line-height: 1.5;
+}
+
+.game-screen {
+    width: 100%;
+    max-width: 520px;
+    padding: 35px 25px;
+    background-color: transparent;
+    border-radius: 15px;
+}
+
+.scoreboard{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background-color:  rgb(224, 190, 255);
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* INSTRUCTIONS */
+
+.instructions {
+    width: 80%;
+    max-width: 560px;
+    padding: 60px;
+    border-radius: 15px;
+    background-color:white;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.10);
+    text-align: left;
+}
+
+.instructions h2 {
+    text-align: center;
+    font-size: 20px;
+}
+
+/* BUTTONS */
+
+.start-button {
+    padding: 18px 40px; 
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    background-color:white;
+    border-radius: 10px;
+}
+
+.start-button:hover {
+    background-color: rgb(219, 230, 242);
+    transform: translateY(-2px);
+}
+
+.secondary-button{
+    padding: 12px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.secondary-button:hover {
+    background-color: rgb(219, 230, 242);
+     transform: translateY(-2px);
+}
+
+
+.text-button {
+    margin: 20px;
+    padding: 18px 40px;
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.text-button:hover {
+    background-color: rgb(219, 230, 242);
+    transform: translateY(-2px);
+}
+
+[hidden] {
+    display: none !important;
+}
+
+/*MEMORY CARDS*/
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.memory-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1;
+    background-color:white;
+}
+
+.memory-card:hover:not(:disabled) {
+    transform: translateY(-3px);
+    background-color: rgb(147, 176, 255);
+}
+
+.memory-card img {
+    display: block;
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+}
+
+.memory-card.matched {
+    background-color: rgb(133, 246, 142);
+    cursor: default;
+}
+
+.memory-card.matched:hover {
+    transform: none;
+}
+
+
+.memory-card img[hidden] {
+    display: none;
+}
+
+/* WINNING SCREEN */
+
+.win-screen {
+    width: 100%;
+    max-width: 600px;
+    padding: 35px 25px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.10);
+    text-align: center;
+}
+
+.win-screen h1 {
+    margin-bottom: 20px;
+    font-size: clamp(34px, 6vw, 48px);
+}
+
+.win-fruits {
+    margin: 20px 0;
+    font-size: 45px;
+}
+
+.final-score {
+    margin: 20px 0;
+    font-weight: bold;
+}
